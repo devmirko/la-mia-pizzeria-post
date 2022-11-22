@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using la_mia_pizzeria_razor_layout.Validator;
 
 namespace la_mia_pizzeria_razor_layout.Models
 {
@@ -7,14 +9,19 @@ namespace la_mia_pizzeria_razor_layout.Models
     {
         public int Id { get; set; }
 
-
+        [Required(ErrorMessage = "Il campo è obbligatorio")]
         public string Name { get; set; }
 
         [Column(TypeName = "text")]
+        [Required(ErrorMessage = "Il campo è obbligatorio")]
+        [AlmenoCinqueIngredienti]
         public string Description { get; set; }
 
+        [Required(ErrorMessage = "Il campo è obbligatorio")]
         public string Image { get; set; }
 
+        [Required(ErrorMessage = "Il campo è obbligatorio")]
+        [PrezzoPizza]
         public double Price { get; set; }
 
         public Pizza()
