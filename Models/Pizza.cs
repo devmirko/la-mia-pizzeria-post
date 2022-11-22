@@ -22,7 +22,7 @@ namespace la_mia_pizzeria_razor_layout.Models
         [Required(ErrorMessage = "Il campo è obbligatorio")]
         [ImageRequired]
         public string Image { get; set; }
-
+        [Range(0,100)]
         [Required(ErrorMessage = "Il campo è obbligatorio")]
         [PrezzoPizza]
         public double Price { get; set; }
