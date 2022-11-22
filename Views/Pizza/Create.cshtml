@@ -1,4 +1,10 @@
-﻿@model Pizza;
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Pizza;
 
 <div class="container">
     <div class="row">
@@ -15,7 +21,7 @@
                 </div>
                 <div class="mb-3">
                     <strong>Titolo:</strong>
-                    <input asp-for="Title" class="d-block w-100" />
+                    <input asp-for="Name" class="d-block w-100" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
@@ -25,7 +31,7 @@
                 </div>
                 <div class="mb-3">
                     <strong>Prezzo:</strong>
-                    <textarea asp-for="Description" rows="10" class="d-block w-100"></textarea>
+                    <input asp-for="Price" class="d-block w-100" />
                     <span asp-validation-for="Price" class="text-danger"></span>
                 </div>
                 <div class="text-end">
@@ -36,3 +42,4 @@
         </div>
     </div>
 </div>
+
