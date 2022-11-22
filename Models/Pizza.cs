@@ -10,11 +10,13 @@ namespace la_mia_pizzeria_razor_layout.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Il campo è obbligatorio")]
+        [StringLength(20, ErrorMessage = "Il titolo non può essere oltre i 20 caratteri")]
         public string Name { get; set; }
 
         [Column(TypeName = "text")]
         [Required(ErrorMessage = "Il campo è obbligatorio")]
         [AlmenoCinqueIngredienti]
+        [StringLength(100, ErrorMessage = "Il titolo non può essere oltre i 100 caratteri")]
         public string Description { get; set; }
 
         [Required(ErrorMessage = "Il campo è obbligatorio")]
@@ -22,6 +24,7 @@ namespace la_mia_pizzeria_razor_layout.Models
 
         [Required(ErrorMessage = "Il campo è obbligatorio")]
         [PrezzoPizza]
+        [StringLength(5, ErrorMessage = "Il prezzo non può essere oltre i 5 caratteri")]
         public double Price { get; set; }
 
         public Pizza()
