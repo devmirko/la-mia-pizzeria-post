@@ -20,11 +20,11 @@ namespace la_mia_pizzeria_razor_layout.Models
         public string Description { get; set; }
 
         [Required(ErrorMessage = "Il campo è obbligatorio")]
+        [ImageRequired]
         public string Image { get; set; }
 
         [Required(ErrorMessage = "Il campo è obbligatorio")]
         [PrezzoPizza]
-        [StringLength(5, ErrorMessage = "Il prezzo non può essere oltre i 5 caratteri")]
         public double Price { get; set; }
 
         public Pizza()
